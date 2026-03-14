@@ -86,8 +86,8 @@ tuning are inseparable decisions.
 
 
 #### sklearn Pipeline + ColumnTransformer
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vkantimahanti/healthcare-ml-portfolio/blob/main/sklearn_pipeline.ipynb)
-📓 [sklearn_pipeline.ipynb](./sklearn_pipeline.ipynb)
+Colab link - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vkantimahanti/healthcare-ml-portfolio/blob/main/sklearn_pipeline.ipynb)
+git repo link - 📓 [sklearn_pipeline.ipynb](./sklearn_pipeline.ipynb)
 
 **What I built:** Production-grade sklearn Pipeline with ColumnTransformer
 applying different preprocessing per feature type. Compared Random Forest,
