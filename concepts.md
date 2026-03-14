@@ -215,4 +215,14 @@ Small dataset (<1k rows)  → Linear Regression or Random Forest wins
 Large dataset (10k+ rows) → XGBoost wins with proper tuning
 
 
+Evaluation metrics that actually matter in healthcare ML — recall, precision, ROC-AUC. 
+Accuracy is useless in healthcare. If 95% of patients are healthy and your model predicts "healthy" for everyone, you get 95% accuracy — but you missed every sick patient. That's catastrophic. Healthcare ML uses three metrics instead:
+
+| Metric | What it means | Healthcare translation |
+| :--- | :--- | :--- |
+| **Recall** | Of all actual sick patients, how many did we catch? | Missing a sick patient = false negative = dangerous |
+| **Precision** | Of all patients we flagged as sick, how many actually were? | False alarm = unnecessary treatment = costly |
+| **ROC-AUC** | How well does the model separate sick from healthy at all thresholds? | 1.0 = perfect, 0.5 = random guess |
+
+
 
