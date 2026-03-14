@@ -39,7 +39,7 @@ All notebooks run on Google Colab — no local setup needed.
 ---
 
 #### Day 1 — Random Forest Baseline
-[randomforest_regression_load_diabetes_dataset.ipynb](./randomforest_regression_load_diabetes_dataset.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vkantimahanti/healthcare-ml-portfolio/blob/main/randomforest_regression_load_diabetes_dataset.ipynb)
 
 | | |
 |---|---|
