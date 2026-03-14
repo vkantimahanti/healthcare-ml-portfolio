@@ -60,7 +60,7 @@ compare models over time. Habit started from Day 1, not after.
 
 ---
 
-#### Day 2 — Algorithm Comparison + Cross Validation
+#### Algorithm Comparison + Cross Validation
 Colab link - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vkantimahanti/healthcare-ml-portfolio/blob/main/Algorithm_Comparison+Cross_Validation.ipynb)
 
 git repo link - 📓[Algorithm_Comparison_Cross_Validation.ipynb](./Algorithm_Comparison_Cross_Validation.ipynb)
@@ -82,6 +82,21 @@ overfitting (gap=0.284) — will be fixed via GridSearchCV in Day 5.
 SVM collapsed with default parameters (C=1) but is recoverable 
 with tuning — shows that algorithm choice and hyperparameter 
 tuning are inseparable decisions.
+
+
+
+#### sklearn Pipeline + ColumnTransformer
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vkantimahanti/healthcare-ml-portfolio/blob/main/sklearn_pipeline.ipynb)
+📓 [sklearn_pipeline.ipynb](./sklearn_pipeline.ipynb)
+
+**What I built:** Production-grade sklearn Pipeline with ColumnTransformer
+applying different preprocessing per feature type. Compared Random Forest,
+Linear Regression and XGBoost inside the same pipeline.
+
+**Key finding:** XGBoost default CV R² 0.283 → tuned 0.416 by reducing
+max_depth 5→3, adding learning_rate=0.1 and subsample=0.8. Small datasets
+favor simple models — XGBoost will win on Week 3 large CMS dataset.
+
 
 ## 👨‍💻 About
 Senior Data and ML Engineer --> Deep diving into ML and AI.
