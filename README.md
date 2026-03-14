@@ -41,7 +41,7 @@ All notebooks run on Google Colab — no local setup needed.
 #### Day 1 — Random Forest Baseline
 Colab link - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vkantimahanti/healthcare-ml-portfolio/blob/main/randomforest_regression_load_diabetes_dataset.ipynb)
 
-gitrepo link - 📓 [randomforest_regression_load_diabetes_dataset.ipynb](./randomforest_regression_load_diabetes_dataset.ipynb)
+git repo link - 📓 [randomforest_regression_load_diabetes_dataset.ipynb](./randomforest_regression_load_diabetes_dataset.ipynb)
 
 | | |
 |---|---|
@@ -63,7 +63,7 @@ compare models over time. Habit started from Day 1, not after.
 #### Day 2 — Algorithm Comparison + Cross Validation
 Colab link - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vkantimahanti/healthcare-ml-portfolio/blob/main/Algorithm_Comparison+Cross_Validation.ipynb)
 
-gitrepo link - 📓[Algorithm_Comparison+Cross_Validation.ipynb](./Algorithm_Comparison+Cross_Validation.ipynb)
+git repo link - 📓[Algorithm_Comparison+Cross_Validation.ipynb](./Algorithm_Comparison+Cross_Validation.ipynb)
 
 | Model | CV Mean R² | Overfit Gap | MAE |
 |-------|-----------|-------------|-----|
