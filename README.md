@@ -98,8 +98,10 @@ max_depth 5→3, adding learning_rate=0.1 and subsample=0.8. Small datasets
 favor simple models — XGBoost will win on Week 3 large CMS dataset.
 
 
+
+
 ## 👨‍💻 About
-Senior Data and ML Engineer --> Deep diving into ML and AI.
+Goal - Deep diving into ML and AI.
 Background in multi-cloud (Azure, GCP), Databricks, medallion architecture, and healthcare data (EHR, FHIR, pre-authorization, Hedis, Stars).
 
 ## How to run
