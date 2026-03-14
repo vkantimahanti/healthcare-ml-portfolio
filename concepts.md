@@ -224,5 +224,21 @@ Accuracy is useless in healthcare. If 95% of patients are healthy and your model
 | **Precision** | Of all patients we flagged as sick, how many actually were? | False alarm = unnecessary treatment = costly |
 | **ROC-AUC** | How well does the model separate sick from healthy at all thresholds? | 1.0 = perfect, 0.5 = random guess |
 
+| Metric | Formula | Use when |
+|--------|---------|----------|
+| Accuracy | correct / total | Balanced classes only |
+| Recall | TP / (TP + FN) | Missing sick patient is dangerous |
+| Precision | TP / (TP + FP) | False alarm is costly |
+| F1 Score | 2 × (P × R) / (P + R) | Balance recall + precision |
+| ROC-AUC | Area under ROC curve | Compare models overall |
 
+**Healthcare rule:** Recall first. Missing a sick patient (FN) costs more than a false alarm (FP).
+
+**Confusion matrix:**
+- FN (False Negative) = said healthy, actually sick = DANGEROUS
+- FP (False Positive) = said sick, actually healthy = costly but safer
+
+**Threshold tuning:**
+Default threshold = 0.5. Lower it to catch more sick patients.
+Tradeoff: recall goes up, precision goes down.
 
