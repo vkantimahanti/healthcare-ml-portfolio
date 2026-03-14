@@ -86,5 +86,133 @@ That's what you're always hunting for.
 **Parameter:** learned by the model during training (e.g. tree split values)
 **Hyperparameter:** set by YOU before training (e.g. `max_depth`, `n_estimators`)
 
+### Pipeline
+🔗 [See it in code](./sklearn_pipeline.ipynb)
+
+**What it is:**
+Chains preprocessing steps + model into one object.
+Fits preprocessing on training data only — prevents data leakage.
+
+**Data engineering analogy:**
+Bronze → Silver → Gold — each layer transforms before passing forward.
+Pipeline does the same: Imputer → Scaler → Model.
+
+**Syntax:**
+```python
+from sklearn.pipeline import Pipeline
+
+pipeline = Pipeline(steps=[
+    ('imputer', SimpleImputer(strategy='median')),  # step 1
+    ('scaler',  StandardScaler()),                  # step 2
+    ('model',   RandomForestRegressor())            # step 3
+])
+
+pipeline.fit(X_train, y_train)   # fits all steps on train only
+pipeline.predict(X_test)         # applies all steps to test
+```
+**Why not preprocess manually:**
+Manual: scale full data → split → train. Scaler saw test data. Leakage.
+Pipeline: split first → fit scaler on train only → apply to test. Clean.
+
+**Imp Note:**
+"Pipeline prevents data leakage by ensuring preprocessing is fitted
+only on training data and applied to test data — never the reverse."
+
+### Preprocessing — when to use what
+
+| Tool | Purpose | Use when |
+|------|---------|----------|
+| `SimpleImputer(strategy='median')` | Fills null values with median | Numeric columns with outliers |
+| `SimpleImputer(strategy='mean')` | Fills null values with mean | Numeric columns, no outliers |
+| `SimpleImputer(strategy='most_frequent')` | Fills with most common value | Categorical columns |
+| `StandardScaler` | Mean=0, Std=1. Scales using mean and std | Normal distribution, no outliers |
+| `RobustScaler` | Scales using median and IQR | Clinical data with extreme lab values |
+
+**When to use RobustScaler over StandardScaler:**
+A patient with blood pressure of 300 (extreme outlier) pulls
+StandardScaler badly — it shifts the mean for everyone.
+RobustScaler uses median and IQR — outliers don't affect it.
+Always use RobustScaler on clinical numeric features.
+
+### ColumnTransformer
+**What it is:**
+Applies different preprocessing to different column groups.
+Same thinking as your silver layer — different rules per column type.
+
+**Syntax:**
+```python
+from sklearn.compose import ColumnTransformer
+
+preprocessor = ColumnTransformer(transformers=[
+    ('numeric', numeric_transformer, ['age', 'bmi', 'bp']),
+    ('other',   other_transformer,   ['sex', 's4', 's5'])
+])
+```
+
+**Rule:**
+Numeric columns with outliers → RobustScaler
+Numeric columns clean → StandardScaler
+Categorical columns → OneHotEncoder (coming in Week 3)
+
+---
+
+
+**What it tracks:**
+
+| Method | What it logs | Example |
+|--------|-------------|---------|
+| `mlflow.log_param()` | Settings you chose | `max_depth=5` |
+| `mlflow.log_metric()` | Performance numbers | `r2=0.452` |
+| `mlflow.sklearn.log_model()` | The trained model file | full pipeline |
+| `mlflow.set_experiment()` | Groups related runs | `"diabetes-pipeline"` |
+
+**Syntax:**
+```python
+mlflow.set_experiment("experiment-name")
+
+with mlflow.start_run(run_name="run-name"):
+    mlflow.log_param("max_depth", 5)
+    mlflow.log_metric("r2", 0.452)
+    mlflow.sklearn.log_model(pipeline, "model")
+```
+
+**Where it saves:**
+Locally in `mlruns/` folder — resets when Colab session ends.
+Permanent solution: DagsHub remote server — coming in Week 2.
+
+---
+
+### joblib — saving and loading pipelines
+
+**What it does:**
+Saves a trained pipeline to a `.pkl` file.
+Load it later to make predictions without retraining.
+In production this file goes to a model registry (MLflow, Vertex AI).
+```python
+import joblib
+
+# Save
+joblib.dump(pipeline, 'model.pkl')
+
+# Load and predict
+loaded = joblib.load('model.pkl')
+loaded.predict(new_data)
+```
+
+**Why not pickle:**
+joblib is faster than Python's built-in pickle for large numpy arrays.
+Industry standard for sklearn models.
+
+
+### XGBoost — why defaults fail on small data
+Three parameters that fixed it:
+- `max_depth 5→3`      : shallower trees, less memorization
+- `learning_rate=0.1`  : slower correction, more stable  
+- `subsample=0.8`      : each tree sees 80% of rows, forces generalization
+
+Rule:
+Small dataset (<1k rows)  → Linear Regression or Random Forest wins
+Large dataset (10k+ rows) → XGBoost wins with proper tuning
+
 
 
