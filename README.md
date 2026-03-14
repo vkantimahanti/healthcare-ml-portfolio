@@ -22,6 +22,7 @@ Python | scikit-learn | MLflow | pandas | matplotlib
 | Random Forest | 0.430 | 0.284 | 43.6 |
 | Decision Tree | 0.206 | 0.334 | 45.9 |
 | SVM | 0.147 | -0.015 | 56.0 |
+```
 
 **Key finding:** Linear Regression wins on this dataset — relationships  
 are mostly linear. Random Forest overfits (gap=0.284), needs tuning.  
