@@ -39,7 +39,7 @@ All notebooks run on Google Colab — no local setup needed.
 ---
 
 #### Day 1 — Random Forest Baseline
-`randomforest_regression_load_diabetes_dataset.ipynb`
+[randomforest_regression_load_diabetes_dataset.ipynb](./randomforest_regression_load_diabetes_dataset.ipynb)
 
 | | |
 |---|---|
@@ -59,7 +59,7 @@ compare models over time. Habit started from Day 1, not after.
 ---
 
 #### Day 2 — Algorithm Comparison + Cross Validation
-`Algorithm_Comparison+Cross_Validation.ipynb`
+[Algorithm_Comparison+Cross_Validation.ipynb](./Algorithm_Comparison+Cross_Validation.ipynb)
 
 | Model | CV Mean R² | Overfit Gap | MAE |
 |-------|-----------|-------------|-----|
