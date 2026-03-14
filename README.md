@@ -63,7 +63,7 @@ compare models over time. Habit started from Day 1, not after.
 #### Day 2 — Algorithm Comparison + Cross Validation
 Colab link - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vkantimahanti/healthcare-ml-portfolio/blob/main/Algorithm_Comparison+Cross_Validation.ipynb)
 
-git repo link - 📓[Algorithm_Comparison+Cross_Validation.ipynb](./Algorithm_Comparison+Cross_Validation.ipynb)
+git repo link - 📓[Algorithm_Comparison_Cross_Validation.ipynb](./Algorithm_Comparison_Cross_Validation.ipynb)
 
 | Model | CV Mean R² | Overfit Gap | MAE |
 |-------|-----------|-------------|-----|
