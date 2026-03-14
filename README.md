@@ -1,8 +1,5 @@
 # Healthcare ML Portfolio
 
-## Stack
-Python | scikit-learn | MLflow | pandas | matplotlib
-
 ## Project 1 — Diabetes Progression Predictor
 - **Algorithm:** Random Forest Regressor
 - **Dataset:** sklearn diabetes dataset (442 patients, 10 features)
@@ -28,3 +25,12 @@ Python | scikit-learn | MLflow | pandas | matplotlib
 are mostly linear. Random Forest overfits (gap=0.284), needs tuning.  
 SVM underperforms due to default hyperparameters (C=1) — tuning fixes this.  
 **Files:** `Algorithm_Comparison+Cross_Validation.ipynb`
+
+
+## Stack
+| Tool | Purpose |
+|------|---------|
+| scikit-learn | ML models and pipelines |
+| MLflow | Experiment tracking |
+| pandas / numpy | Data manipulation |
+| matplotlib | Visualization |
