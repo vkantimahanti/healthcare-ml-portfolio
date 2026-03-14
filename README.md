@@ -86,8 +86,7 @@ tuning are inseparable decisions.
 ## 👨‍💻 About
 
 Senior Data Engineer transitioning into ML and AI Architecture.
-Background in multi-cloud (Azure, GCP), Databricks, medallion 
-architecture, and healthcare data.
+Background in multi-cloud (Azure, GCP), Databricks, medallion architecture, and healthcare data (EHR, FHIR, pre-authorization, Hedis, Stars).
 
 
 ## Stack
