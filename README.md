@@ -84,9 +84,15 @@ with tuning — shows that algorithm choice and hyperparameter
 tuning are inseparable decisions.
 
 ## 👨‍💻 About
-
-Senior Data Engineer transitioning into ML and AI Architecture.
+Senior Data and ML Engineer --> Deep diving into ML and AI.
 Background in multi-cloud (Azure, GCP), Databricks, medallion architecture, and healthcare data (EHR, FHIR, pre-authorization, Hedis, Stars).
+
+## How to run
+All notebooks run on Google Colab — no local setup needed.
+1. Click the notebook link
+2. Click on colab link or
+3. File → Save a copy in Drive 
+4. Run cells top to bottom
 
 
 ## Stack
