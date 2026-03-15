@@ -38,7 +38,7 @@ All notebooks run on Google Colab — no local setup needed.
 
 ---
 
-#### Day 1 — Random Forest Baseline
+#### Random Forest Baseline
 Colab link - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vkantimahanti/healthcare-ml-portfolio/blob/main/randomforest_regression_load_diabetes_dataset.ipynb)
 
 git repo link - 📓 [randomforest_regression_load_diabetes_dataset.ipynb](./randomforest_regression_load_diabetes_dataset.ipynb)
@@ -97,7 +97,15 @@ Linear Regression and XGBoost inside the same pipeline.
 max_depth 5→3, adding learning_rate=0.1 and subsample=0.8. Small datasets
 favor simple models — XGBoost will win on Week 3 large CMS dataset.
 
+---
 
+#### random forest and xgboost with gridsearchcv for hyperparamter tuning.
+Colab link - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vkantimahanti/healthcare-ml-portfolio/blob/main/Hyperparameters_gridsearchcv_breastcancer.ipynb)
+git repo link - 📓 [sklearn_pipeline.ipynb](./Hyperparameters_gridsearchcv_breastcancer.ipynb)
+
+**What I built:** GridSearchCV testing 36 parameter combinations across 5-fold cross validation, optimised for Recall (healthcare priority).
+
+**Key finding:** Default pipeline Recall 0.931 → tuned 0.958 ↑ 0.028. Top 5 combinations scored within 0.003 of each other — rank 2 (50 trees, max_depth=7) is the smarter production choice: same clinical outcome, 4x faster inference. Always check std alongside mean — lower std means more stable predictions across different patient groups.
 
 
 ## 👨‍💻 About
