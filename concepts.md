@@ -155,9 +155,26 @@ Numeric columns clean → StandardScaler
 Categorical columns → OneHotEncoder (coming in Week 3)
 
 ---
+**Random Forest — parallel trees (bagging):**
+Trees built independently on random data samples.
+Final answer = majority vote.
+Robust, good defaults, works on small data.
 
+**XGBoost — sequential trees (boosting):**
+Each tree corrects previous tree's mistakes.
+Final answer = sum of corrections.
+Powerful on large data, sensitive to hyperparameters.
 
-**What it tracks:**
+**When to use what:**
+Small dataset (<1k rows)     → Random Forest
+Large dataset (10k+ rows)    → XGBoost
+Noisy real-world data        → Random Forest first, then XGBoost tuned
+Clean research data          → either works, XGBoost wins when tuned
+Production, speed matters    → Random Forest (faster inference)
+Production, accuracy matters → XGBoost tuned
+
+---
+**MLFlow What it tracks:**
 
 | Method | What it logs | Example |
 |--------|-------------|---------|
