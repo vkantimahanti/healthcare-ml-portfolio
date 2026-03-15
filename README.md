@@ -87,6 +87,7 @@ tuning are inseparable decisions.
 
 #### sklearn Pipeline + ColumnTransformer
 Colab link - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vkantimahanti/healthcare-ml-portfolio/blob/main/sklearn_pipeline.ipynb)
+
 git repo link - 📓 [sklearn_pipeline.ipynb](./sklearn_pipeline.ipynb)
 
 **What I built:** Production-grade sklearn Pipeline with ColumnTransformer
@@ -101,6 +102,7 @@ favor simple models — XGBoost will win on Week 3 large CMS dataset.
 
 #### random forest and xgboost with gridsearchcv for hyperparamter tuning.
 Colab link - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vkantimahanti/healthcare-ml-portfolio/blob/main/Hyperparameters_gridsearchcv_breastcancer.ipynb)
+
 git repo link - 📓 [sklearn_pipeline.ipynb](./Hyperparameters_gridsearchcv_breastcancer.ipynb)
 
 **What I built:** GridSearchCV testing 36 parameter combinations across 5-fold cross validation, optimised for Recall (healthcare priority).
