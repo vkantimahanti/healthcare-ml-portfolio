@@ -116,6 +116,7 @@ Colab link - [![Open In Colab](https://colab.research.google.com/assets/colab-ba
 git repo link - 📓 [sklearn_pipeline.ipynb](./HeartDiseasePrediction.ipynb)
 
 Project covers full clinical ML System:
+
 ├── EDA on real UCI Heart Disease data
 
 ├── ColumnTransformer pipeline
