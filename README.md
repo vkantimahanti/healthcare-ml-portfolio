@@ -125,7 +125,9 @@ Project covers full clinical ML System:
 ├── GridSearchCV (confirmed defaults best)
 
 ├── SHAP explainability (thal, cp, ca top drivers)
+
 ├── FastAPI prediction endpoint
+
 └── 3 patient risk predictions validated clinically
 
 ## 👨‍💻 About
