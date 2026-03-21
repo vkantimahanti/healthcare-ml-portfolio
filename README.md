@@ -21,6 +21,10 @@ data quality, layered architecture. No toy examples. No iris dataset.
 If you are a data engineer curious about ML, or an ML engineer curious
 about production data pipelines — this repo is for you.
 
+## Architecture 
+![Week 1 Architecture](./HealthCare_ML_Pipeline.png)
+
+
 
 ## 🚀 How to run any project
 
@@ -30,8 +34,6 @@ All notebooks run on Google Colab — no local setup needed.
 2. In Colab: `File → Save a copy in Drive`
 3. Run cells from top to bottom
 4. Each notebook is self-contained with install commands in Cell 1
-
-![Week 1 Architecture](./HealthCare_ML_Pipeline.png)
 
 
 ## 📂 Projects
