@@ -117,9 +117,13 @@ git repo link - 📓 [sklearn_pipeline.ipynb](./HeartDiseasePrediction.ipynb)
 
 Project covers full clinical ML System:
 ├── EDA on real UCI Heart Disease data
+
 ├── ColumnTransformer pipeline
+
 ├── 3 models compared on Recall
+
 ├── GridSearchCV (confirmed defaults best)
+
 ├── SHAP explainability (thal, cp, ca top drivers)
 ├── FastAPI prediction endpoint
 └── 3 patient risk predictions validated clinically
