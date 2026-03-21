@@ -110,6 +110,20 @@ git repo link - 📓 [sklearn_pipeline.ipynb](./Hyperparameters_gridsearchcv_bre
 **Key finding:** Default pipeline Recall 0.931 → tuned 0.958 ↑ 0.028. Top 5 combinations scored within 0.003 of each other — rank 2 (50 trees, max_depth=7) is the smarter production choice: same clinical outcome, 4x faster inference. Always check std alongside mean — lower std means more stable predictions across different patient groups.
 
 
+#### Capstone project on heart disease prediction
+Colab link - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vkantimahanti/healthcare-ml-portfolio/blob/main/HeartDiseasePrediction.ipynb)
+
+git repo link - 📓 [sklearn_pipeline.ipynb](./HeartDiseasePrediction.ipynb)
+
+Project covers full clinical ML System:
+   ├── EDA on real UCI Heart Disease data
+         ├── ColumnTransformer pipeline
+         ├── 3 models compared on Recall
+         ├── GridSearchCV (confirmed defaults best)
+         ├── SHAP explainability (thal, cp, ca top drivers)
+         ├── FastAPI prediction endpoint
+         └── 3 patient risk predictions validated clinically
+
 ## 👨‍💻 About
 Goal - Deep diving into ML and AI.
 Background in multi-cloud (Azure, GCP), Databricks, medallion architecture, and healthcare data (EHR, FHIR, pre-authorization, Hedis, Stars).
