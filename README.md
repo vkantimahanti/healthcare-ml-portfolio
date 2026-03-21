@@ -31,6 +31,8 @@ All notebooks run on Google Colab — no local setup needed.
 3. Run cells from top to bottom
 4. Each notebook is self-contained with install commands in Cell 1
 
+![Week 1 Architecture](./HealthCare_ML_Pipeline.png)
+
 
 ## 📂 Projects
 
